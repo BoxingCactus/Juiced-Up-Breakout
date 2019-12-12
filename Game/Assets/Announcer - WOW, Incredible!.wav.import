@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Announcer - WOW, Incredible!.wav-31f73cab7997f1f17c0c91b46ac722e6.sample"
+
+[deps]
+
+source_file="res://Assets/Announcer - WOW, Incredible!.wav"
+dest_files=[ "res://.import/Announcer - WOW, Incredible!.wav-31f73cab7997f1f17c0c91b46ac722e6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

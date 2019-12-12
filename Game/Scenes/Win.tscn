@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/RigidBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Assets/New Piskel (16).png" type="Texture" id=2]
+[ext_resource path="res://Assets/OstrichSans-Heavy.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Peanut Butter Jelly Dance (Extended) - Super Animal Royale Vol 2 (Original Game Soundtrack).wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Announcer - WOW, Incredible!.wav" type="AudioStream" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 65.7278, 27.8095 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 3 )
+
+[node name="Win" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -10.0
+margin_right = 1030.0
+margin_bottom = 599.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="UwU" type="RigidBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="UwU"]
+position = Vector2( 500, 460 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UwU"]
+position = Vector2( 498.592, 464.272 )
+shape = SubResource( 1 )
+
+[node name="Message" type="Node2D" parent="."]
+position = Vector2( 510, 470 )
+
+[node name="Label" type="Label" parent="Message"]
+margin_left = -524.0
+margin_top = -472.0
+margin_right = 506.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 1, 0.74902, 1 )
+text = "Wow! Incredible! You have the 
+Rhythm and the rhyme!
+
+
+
+NERD!"
+align = 1
+valign = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+position = Vector2( 10, 0 )
+polygon = PoolVector2Array( 970, 0, 970, 50, -10, 50, -10, 540, 970, 540, 970, 0, 1020, 0, 1020, 600, -60, 600, -60, 0 )
